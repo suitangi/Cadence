@@ -11,15 +11,21 @@
     <sprite>sprites\spr_playerIdle</sprite>
     <sprite>sprites\spr_playerAttack</sprite>
     <sprite>sprites\spr_playerWalk</sprite>
+    <sprite>sprites\spr_title</sprite>
+    <sprite>sprites\spr_level</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
+    <object>objects\object2</object>
+    <object>objects\obj_title</object>
+    <object>objects\obj_level</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\title</room>
+    <room>rooms\level1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
