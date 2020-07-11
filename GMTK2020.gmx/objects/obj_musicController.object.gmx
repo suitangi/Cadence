@@ -53,7 +53,7 @@ y = obj_note_end.y
           <argument>
             <kind>1</kind>
             <string>if (ind == 0 &amp;&amp; beats[0, 0] != 0) {
-    
+    alarm[1] = beats[0, 0] * spb * 60;
 } else {
     if (beats[ind, 1] == 0){
         instance_create(obj_musicController.x, obj_musicController.y, obj_note_shoot);
@@ -64,11 +64,9 @@ y = obj_note_end.y
     } else if(beats[ind, 1] == 3) {
         instance_create(obj_musicController.x, obj_musicController.y, obj_note_left);
     }
+    alarm[1] = (beats[ind + 1, 0] - beats[ind, 0]) * spb * 60;
+    ind += 1;
 }
-
-alarm[1] = (beats[ind + 1, 0] - beats[ind, 0]) * spb * 60;
-ind += 1;
-
 </string>
           </argument>
         </arguments>
