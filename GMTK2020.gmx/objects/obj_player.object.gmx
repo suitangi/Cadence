@@ -35,7 +35,6 @@ jumpspeed = 10
 dashspeed = 20
 movespeed = 4
 image_speed = .25;
-moving = false;
 
 </string>
           </argument>
@@ -74,14 +73,10 @@ if (move &gt; 0) {
 } else if (move &lt; 0) {
     image_xscale = 1;
 }
-if (move != 0 &amp;&amp; !moving) {
+if (move != 0 &amp;&amp; sprite_index != spr_playerWalk) {
     sprite_index = spr_playerWalk;
-    image_speed = 0.25;
-    moving = true;
-} else if (move == 0 &amp;&amp; moving){
+} else if (move == 0 &amp;&amp; sprite_index != spr_playerIdle){
     sprite_index = spr_playerIdle;
-    image_speed = 0.25;
-    moving = false;
 }
 
 if (abs(hsp) &lt;= movespeed) {
@@ -131,10 +126,8 @@ if (place_meeting(x, y + vsp, obj_wall)) {
         y += sign(vsp);
     }
     vsp = 0
-    moving = false;
 } else {
     sprite_index = spr_playerJump;
-    moving = true;
 }
 y += vsp
 </string>
