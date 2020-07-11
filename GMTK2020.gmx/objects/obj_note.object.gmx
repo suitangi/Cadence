@@ -63,6 +63,11 @@ if (abs(x - obj_note_end.x) &lt; collision_buffer) {
     // TEMP bonk sound effect
     audio_play_sound(bonk, 20, false);
     if (object_get_name(object_index) == "obj_note_up") {
+        with (obj_player) {
+            if (place_meeting(x, y + 1, obj_wall)) {
+                instance_create(x, y + 32, obj_jump);
+            }
+        }
         obj_player.vsp = -1 * obj_player.jumpspeed
         instance_destroy()
     } else if (object_get_name(object_index) == "obj_note_left") {
