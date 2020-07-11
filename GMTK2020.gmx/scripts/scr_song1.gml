@@ -1,6 +1,6 @@
-obj_musicController.bpm = 130;
-spb = 1/(130/60)
-obj_musicController.alarm[0] = 117;
+obj_musicController.bpm = 130.33;
+spb = 1/(obj_musicController.bpm/60)
+obj_musicController.alarm[0] = 120;
 obj_musicController.alarm[1] = 1;
 obj_musicController.songIndex = song1;
 obj_musicController.beats = scr_Array2(68, 2,
