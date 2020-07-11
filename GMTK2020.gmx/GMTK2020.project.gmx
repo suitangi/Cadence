@@ -22,6 +22,7 @@
     <sprite>sprites\spr_note_up</sprite>
     <sprite>sprites\spr_note_left</sprite>
     <sprite>sprites\spr_note_right</sprite>
+    <sprite>sprites\spr_noteGone</sprite>
     <sprite>sprites\spr_note_shoot</sprite>
     <sprite>sprites\spr_jumpParticle</sprite>
     <sprite>sprites\sprite15</sprite>
@@ -29,7 +30,10 @@
     <sprite>sprites\spr_playerDash</sprite>
     <sprite>sprites\spr_dashparticle</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+    <background>background\background1</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_song1.gml</script>
