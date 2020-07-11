@@ -6,8 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\song1</sound>
-    <sound>sound\bonk</sound>
     <sound>sound\song4</sound>
+    <sound>sound\bonk</sound>
     <sounds name="shouts">
       <sound>sound\comeon1</sound>
       <sound>sound\doit1</sound>
@@ -40,6 +40,9 @@
     <sprite>sprites\spr_playerAttack_hitbox</sprite>
     <sprite>sprites\spr_playerDash</sprite>
     <sprite>sprites\spr_dashparticle</sprite>
+    <sprite>sprites\spr_enemyIdle</sprite>
+    <sprite>sprites\spr_enemyIframe</sprite>
+    <sprite>sprites\spr_enemyAttack</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -68,6 +71,7 @@
     <object>objects\obj_jump</object>
     <object>objects\obj_playerAttack_hitbox</object>
     <object>objects\obj_dash</object>
+    <object>objects\obj_enemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
@@ -79,6 +83,10 @@
   <help>
     <rtf>help.rtf</rtf>
   </help>
+  <audiogroups name="audiogroups">
+    <audiogroup name="audiogroup_default"/>
+    <audiogroup name="Music"/>
+  </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName></TutorialName>

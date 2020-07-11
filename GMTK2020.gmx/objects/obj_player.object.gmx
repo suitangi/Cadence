@@ -326,7 +326,7 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_stop_sound(song1);
+            <string>audio_group_stop_all(Music);
 room_restart();
 
 </string>
