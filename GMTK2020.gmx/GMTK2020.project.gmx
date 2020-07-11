@@ -23,9 +23,11 @@
     <sprite>sprites\spr_note_left</sprite>
     <sprite>sprites\spr_note_right</sprite>
     <sprite>sprites\spr_note_shoot</sprite>
-    <sprite>sprites\sprite14</sprite>
+    <sprite>sprites\spr_jumpParticle</sprite>
     <sprite>sprites\sprite15</sprite>
     <sprite>sprites\spr_playerAttack_hitbox</sprite>
+    <sprite>sprites\spr_playerDash</sprite>
+    <sprite>sprites\spr_dashparticle</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -49,6 +51,7 @@
     <object>objects\obj_musicController</object>
     <object>objects\obj_jump</object>
     <object>objects\obj_playerAttack_hitbox</object>
+    <object>objects\obj_dash</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>

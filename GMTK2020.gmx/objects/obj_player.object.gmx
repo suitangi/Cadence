@@ -37,6 +37,58 @@ movespeed = 4
 image_speed = .25;
 global.view_border = 300
 shooting = false;
+dashing = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(obj_player.x, obj_player.y, obj_dash);
+obj_dash.image_xscale = -1 * image_xscale;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>sprite_index = spr_playerDash;
+dashing = true;
+image_index = 0;
+alarm[1] = image_number - 1;
+image_speed = 1;
 </string>
           </argument>
         </arguments>
@@ -87,10 +139,12 @@ shooting = false;
           <argument>
             <kind>1</kind>
             <string>shooting = false;
+dashing = false;
 image_speed = .25;
 if (move == 0) {
     sprite_index = spr_playerIdle;
 }
+
 </string>
           </argument>
         </arguments>
@@ -158,9 +212,9 @@ if (move &gt; 0) {
 } else if (move &lt; 0) {
     image_xscale = 1;
 }
-if (move != 0 &amp;&amp; sprite_index != spr_playerWalk &amp;&amp; !shooting) {
+if (move != 0 &amp;&amp; sprite_index != spr_playerWalk &amp;&amp; !shooting &amp;&amp; !dashing) {
     sprite_index = spr_playerWalk;
-} else if (move == 0 &amp;&amp; sprite_index != spr_playerIdle &amp;&amp; !shooting){
+} else if (move == 0 &amp;&amp; sprite_index != spr_playerIdle &amp;&amp; !shooting &amp;&amp; !dashing){
     sprite_index = spr_playerIdle;
 }
 
@@ -212,7 +266,7 @@ if (place_meeting(x, y + vsp, obj_wall)) {
         y += sign(vsp);
     }
     vsp = 0
-} else if (!shooting){
+} else if (!shooting &amp;&amp; !dashing){
     sprite_index = spr_playerJump;
 }
 y += vsp
