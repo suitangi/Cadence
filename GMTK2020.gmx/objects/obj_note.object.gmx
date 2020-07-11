@@ -98,7 +98,6 @@ if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
         audio_play_sound(sound_index, 30, false)
     }
     
-    sprite_index = spr_noteGone;
     alarm[0] = 60;
     stop = true;
     if (object_get_name(object_index) == "obj_note_up") {
@@ -108,18 +107,22 @@ if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
             }
         }
         obj_player.vsp = -1 * obj_player.jumpspeed
+        sprite_index = spr_noteGone;
     } else if (object_get_name(object_index) == "obj_note_left") {
         obj_player.hsp = -obj_player.dashspeed
         obj_player.alarm[3] = 1;
         obj_player.alarm[11] = 6;
         obj_player.image_xscale = 1;
+        sprite_index = spr_noteGone;
     } else if (object_get_name(object_index) == "obj_note_right") {
         obj_player.hsp = obj_player.dashspeed
         obj_player.alarm[3] = 1;
         obj_player.image_xscale = -1;
         obj_player.alarm[11] = 6;
+        sprite_index = spr_noteGone;
     } else if (object_get_name(object_index) == "obj_note_shoot") {
         obj_player.alarm[0] = 1;
+        sprite_index = spr_note_shootDone;
     }
 }
 
