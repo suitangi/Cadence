@@ -35,7 +35,7 @@ jumpspeed = 10
 dashspeed = 20
 movespeed = 4
 image_speed = .25;
-
+global.view_border = 300
 </string>
           </argument>
         </arguments>
@@ -130,6 +130,40 @@ if (place_meeting(x, y + vsp, obj_wall)) {
     sprite_index = spr_playerJump;
 }
 y += vsp
+
+
+
+// update view
+// left collision
+if(x - view_xview[0] &lt; global.view_border) {
+    view_xview[0] = x - global.view_border
+}
+//right collision
+if(x + global.view_border &gt; view_xview[0] + view_wview[0]) {
+    view_xview[0] = x - (view_wview[0] - global.view_border)
+}
+//top collision
+if(y - view_yview[0] &lt; global.view_border) {
+    view_yview[0] = y - global.view_border
+}
+//bottom collision
+if(y + global.view_border &gt; view_yview[0] + view_hview[0]) {
+    view_yview[0] = y - (view_hview[0] - global.view_border)
+}
+
+//bounds check
+if(view_xview[0] &lt; 0) {
+    view_xview[0] = 0
+}
+if(view_xview[0] + view_wview[0] &gt; room_width) {
+    view_xview[0] = room_width - view_wview[0]
+}
+if(view_yview[0] &lt; 0) {
+    view_yview[0] = 0
+}
+if(view_yview[0] + view_hview[0] &gt; room_height) {
+    view_yview[0] = room_height - view_hview[0]
+}
 </string>
           </argument>
         </arguments>
