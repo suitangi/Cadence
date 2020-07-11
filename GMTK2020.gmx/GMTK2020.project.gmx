@@ -44,6 +44,7 @@
     <sprite>sprites\spr_enemyIframe</sprite>
     <sprite>sprites\spr_enemyAttack</sprite>
     <sprite>sprites\sprite23</sprite>
+    <sprite>sprites\spr_buleltImpact</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -73,6 +74,7 @@
     <object>objects\obj_playerAttack_hitbox</object>
     <object>objects\obj_dash</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_bulletImpact</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
