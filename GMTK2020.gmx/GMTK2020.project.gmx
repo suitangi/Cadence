@@ -24,6 +24,7 @@
     <sprite>sprites\spr_note_right</sprite>
     <sprite>sprites\spr_note_shoot</sprite>
     <sprite>sprites\sprite14</sprite>
+    <sprite>sprites\sprite15</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
