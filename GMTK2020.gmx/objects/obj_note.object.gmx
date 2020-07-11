@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>// in seconds (game runs at 60fps)
-time_to_end = 2
-total_frames = time_to_end * 60
-frames_to_end = time_to_end * 60
+time_to_end = obj_musicController.four_beats
+total_frames = time_to_end
+frames_to_end = time_to_end
 distance_x = x - obj_note_end.x
 
 collision_buffer = 5
