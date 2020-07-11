@@ -30,7 +30,6 @@
     <sprite>sprites\spr_level</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_note_end</sprite>
-    <sprite>sprites\spr_note_up</sprite>
     <sprite>sprites\spr_note_shootDone</sprite>
     <sprite>sprites\spr_note_right</sprite>
     <sprite>sprites\spr_noteGone</sprite>
@@ -43,6 +42,7 @@
     <sprite>sprites\spr_enemyIdle</sprite>
     <sprite>sprites\spr_enemyIframe</sprite>
     <sprite>sprites\spr_enemyAttack</sprite>
+    <sprite>sprites\sprite23</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
