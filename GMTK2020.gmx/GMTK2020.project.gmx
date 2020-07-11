@@ -25,6 +25,7 @@
     <sprite>sprites\spr_note_shoot</sprite>
     <sprite>sprites\sprite14</sprite>
     <sprite>sprites\sprite15</sprite>
+    <sprite>sprites\spr_playerAttack_hitbox</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -47,6 +48,7 @@
     <object>objects\obj_note_shoot</object>
     <object>objects\obj_musicController</object>
     <object>objects\obj_jump</object>
+    <object>objects\obj_playerAttack_hitbox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
