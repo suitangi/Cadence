@@ -67,7 +67,7 @@ obj_dash.image_xscale = -1 * image_xscale;
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="2">
+    <event eventtype="2" enumb="3">
       <action>
         <libid>1</libid>
         <id>603</id>
