@@ -1,4 +1,4 @@
-obj_musicController.bpm = 130.33;
+obj_musicController.bpm = 130.32;
 spb = 1/(obj_musicController.bpm/60)
 obj_musicController.alarm[0] = 120;
 obj_musicController.alarm[1] = 1;
