@@ -7,6 +7,16 @@
   <sounds name="sound">
     <sound>sound\song1</sound>
     <sound>sound\bonk</sound>
+    <sounds name="shouts">
+      <sound>sound\comeon1</sound>
+      <sound>sound\doit1</sound>
+      <sound>sound\drop2</sound>
+      <sound>sound\go2</sound>
+      <sound>sound\ho1</sound>
+      <sound>sound\hey1</sound>
+      <sound>sound\oh1</sound>
+      <sound>sound\yeah2</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>

@@ -82,12 +82,22 @@ stop = false;
     x = obj_note_end.x + (distance_x * (frames_to_end / total_frames))
     y = view_yview + global.padding
     frames_to_end -= 1
+} else {
+    x = obj_note_end.x
+    y = obj_note_end.y
 }
     
 // collision with obj_note_end
 if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
     // TEMP bonk sound effect
     //audio_play_sound(bonk, 20, false);
+    
+    // Play random vocal shout with 1/10 chance
+    if (random(10) &gt;= 9) {
+        sound_index = choose(comeon1, doit1, drop2, go2, ho1, hey1, oh1, yeah2)
+        audio_play_sound(sound_index, 30, false)
+    }
+    
     sprite_index = spr_noteGone;
     alarm[0] = 60;
     stop = true;
