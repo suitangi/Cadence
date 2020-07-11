@@ -64,8 +64,8 @@ key_right = keyboard_check(ord("D"))
 key_left = -keyboard_check(ord("A"))
 key_up = keyboard_check(ord("W"))
 key_down = keyboard_check(ord("S"))
-key_temp_rightdash = keyboard_check(ord("P"))
-key_temp_leftdash = -keyboard_check(ord("O"))
+//key_temp_rightdash = keyboard_check(ord("P"))
+//key_temp_leftdash = -keyboard_check(ord("O"))
 
 
 move = key_left + key_right
@@ -101,19 +101,19 @@ if (vsp &lt; max_vsp) {
 }
 
 // jump
-if (place_meeting(x, y + 1, obj_wall)) {
+if (place_meeting(x, y + 1, obj_wall) &amp;&amp; (key_up == 1)) {
     vsp = key_up * -jumpspeed
 }
 
 // temp rightdash
-if (key_temp_rightdash = 1) {
-    hsp = key_temp_rightdash * dashspeed
-}
+//if (key_temp_rightdash = 1) {
+   
+//}
 
 // temp leftdash
-if (key_temp_leftdash = -1) {
-    hsp = key_temp_leftdash * dashspeed
-}
+//if (key_temp_leftdash = -1) {
+//    hsp = key_temp_leftdash * dashspeed
+//}
 
 // horizontal collision
 if (place_meeting(x + hsp, y, obj_wall)) {

@@ -14,6 +14,10 @@
     <sprite>sprites\spr_title</sprite>
     <sprite>sprites\spr_level</sprite>
     <sprite>sprites\spr_door</sprite>
+    <sprite>sprites\spr_note_end</sprite>
+    <sprite>sprites\spr_note_up</sprite>
+    <sprite>sprites\spr_note_left</sprite>
+    <sprite>sprites\spr_note_right</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -24,6 +28,11 @@
     <object>objects\obj_title</object>
     <object>objects\obj_level</object>
     <object>objects\obj_door</object>
+    <object>objects\obj_note_end</object>
+    <object>objects\obj_note</object>
+    <object>objects\obj_note_up</object>
+    <object>objects\obj_note_left</object>
+    <object>objects\obj_note_right</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
