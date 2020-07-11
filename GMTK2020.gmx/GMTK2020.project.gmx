@@ -13,6 +13,7 @@
     <sprite>sprites\spr_playerWalk</sprite>
     <sprite>sprites\spr_title</sprite>
     <sprite>sprites\spr_level</sprite>
+    <sprite>sprites\spr_door</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -22,10 +23,13 @@
     <object>objects\object2</object>
     <object>objects\obj_title</object>
     <object>objects\obj_level</object>
+    <object>objects\obj_door</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
     <room>rooms\level1</room>
+    <room>rooms\level2</room>
+    <room>rooms\level3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
