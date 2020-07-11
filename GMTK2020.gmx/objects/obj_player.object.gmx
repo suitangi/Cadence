@@ -34,7 +34,7 @@ vsp = 0
 jumpspeed = 10
 dashspeed = 20
 movespeed = 4
-image_speed = .5;
+image_speed = .25;
 moving = false;
 
 </string>
@@ -76,11 +76,11 @@ if (move &gt; 0) {
 }
 if (move != 0 &amp;&amp; !moving) {
     sprite_index = spr_playerWalk;
-    image_speed = 0.5;
+    image_speed = 0.25;
     moving = true;
 } else if (move == 0 &amp;&amp; moving){
     sprite_index = spr_playerIdle;
-    image_speed = 0.5;
+    image_speed = 0.25;
     moving = false;
 }
 
@@ -104,7 +104,11 @@ if (vsp &lt; max_vsp) {
 if (place_meeting(x, y + 1, obj_wall)) {
     vsp = key_up * -jumpspeed
 }
-
+if (vsp != 0) {
+    sprite_index = spr_playerJump;
+    moving = true;
+}
+    
 // temp rightdash
 if (key_temp_rightdash = 1) {
     hsp = key_temp_rightdash * dashspeed
@@ -130,6 +134,8 @@ if (place_meeting(x, y + vsp, obj_wall)) {
         y += sign(vsp);
     }
     vsp = 0
+    sprite_index = spr_playerIdle;
+    moving = false;
 }
 y += vsp
 </string>
