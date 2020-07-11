@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_song1();
+            <string>if (room_get_name(room) == "level1"){
+    scr_song1();
+//} else if (room_get_name(room) == "level2"){
+//    scr_song2();
+//} else if (room_get_name(room) == "level3"){
+//    scr_song3();
+} else if (room_get_name(room) == "level4"){
+    scr_song4();
+}
 ind = 0;
 
 x = obj_note_end.x + 1024

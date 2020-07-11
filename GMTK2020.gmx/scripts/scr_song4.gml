@@ -1,6 +1,9 @@
 obj_musicController.bpm = 160;
 spb = 1/(obj_musicController.bpm/60)
-obj_musicController.alarm[0] = 120;
+// start music after 4 beats (first note hits right on music start)
+obj_musicController.four_beats = spb * 4 * 60
+obj_musicController.alarm[0] = obj_musicController.four_beats;
+
 obj_musicController.alarm[1] = 1;
 obj_musicController.songIndex = song4;
 obj_musicController.beats = scr_Array2(366, 2,
@@ -370,4 +373,3 @@ obj_musicController.beats = scr_Array2(366, 2,
 493,0,
 494,2,
 495,3)
-
