@@ -38,6 +38,11 @@ image_speed = .25;
 global.view_border = 300
 shooting = false;
 dashing = false;
+player_health = 3;
+iframe = false;
+iframe_flashing = false;
+iframe_cooldown = 60;
+iframe_flash_speed = 4;
 </string>
           </argument>
         </arguments>
@@ -62,6 +67,84 @@ dashing = false;
             <kind>1</kind>
             <string>instance_create(obj_player.x, obj_player.y, obj_dash);
 obj_dash.image_xscale = -1 * image_xscale;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///flash colour
+image_blend = c_red
+if (iframe = true) {
+    alarm[5] = iframe_flash_speed
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///reset colrour
+image_blend = -1
+if (iframe = true) {
+    alarm[6] = iframe_flash_speed
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>iframe = false
+iframe_flashing = false
 </string>
           </argument>
         </arguments>
@@ -309,6 +392,43 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_enemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (iframe == false) {
+    iframe = true
+    alarm[4] = iframe_cooldown
+    player_health -= 1
+    
+    image_blend = c_red
+    alarm[5] = iframe_flash_speed
+    
+    //test
+    show_debug_message("lost 1 health")
+    
+    if (player_health == 0) {
+        room_restart()
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="5" enumb="82">
       <action>
         <libid>1</libid>
@@ -326,8 +446,7 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_group_stop_all(Music);
-room_restart();
+            <string>room_restart();
 
 </string>
           </argument>
