@@ -3,7 +3,7 @@ spb = 1/(obj_musicController.bpm/60)
 obj_musicController.alarm[0] = 120;
 obj_musicController.alarm[1] = 1;
 obj_musicController.songIndex = song1;
-obj_musicController.beats = scr_Array2(68, 2,
+obj_musicController.beats = scr_Array2(89, 2,
 0, 0,
 4, 0,
 8, 0,
@@ -71,5 +71,26 @@ obj_musicController.beats = scr_Array2(68, 2,
 88, 0,
 90, 0,
 92, 2,
-94, 3)
+94, 3,
+96, 1,
+100, 1, 
+102, 0, 
+103, 0,
+104, 1, 
+108, 1,
+110, 0,
+111, 0,
+112, 1, 
+116, 1,
+118, 0,
+119, 0,
+120, 1, 
+124, 1,
+126, 0,
+127, 0,
+128, 1,
+144, 0,
+148, 0,
+152, 0, 
+156, 0)
 
