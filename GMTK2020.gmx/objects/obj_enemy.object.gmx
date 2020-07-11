@@ -30,6 +30,7 @@ attacking = false;
 attack_duration = 120;
 life = 2;
 iframe = false;
+
 </string>
           </argument>
         </arguments>
@@ -131,6 +132,13 @@ sprite_index = spr_enemyIdle;
 }
 if (life &lt; 1) {
     instance_destroy();
+}
+
+// always face player
+if (obj_player.x - x &gt;= 0) {
+    image_xscale = -1
+} else {
+    image_xscale = 1   
 }
 </string>
           </argument>

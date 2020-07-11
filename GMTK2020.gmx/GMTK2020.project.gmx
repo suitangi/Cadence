@@ -24,6 +24,7 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_playerIdle</sprite>
     <sprite>sprites\spr_playerAttack</sprite>
+    <sprite>sprites\spr_playerAttack_projectile</sprite>
     <sprite>sprites\spr_playerWalk</sprite>
     <sprite>sprites\spr_playerJump</sprite>
     <sprite>sprites\spr_title</sprite>

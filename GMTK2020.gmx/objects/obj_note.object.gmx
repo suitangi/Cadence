@@ -92,12 +92,6 @@ if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
     // TEMP bonk sound effect
     //audio_play_sound(bonk, 20, false);
     
-    // Play random vocal shout with 1/10 chance
-    if (random(10) &gt;= 9) {
-        sound_index = choose(comeon1, doit1, drop2, go2, ho1, hey1, oh1, yeah2)
-        audio_play_sound(sound_index, 30, false)
-    }
-    
     alarm[0] = 60;
     stop = true;
     if (object_get_name(object_index) == "obj_note_up") {
@@ -123,6 +117,12 @@ if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
     } else if (object_get_name(object_index) == "obj_note_shoot") {
         obj_player.alarm[0] = 1;
         sprite_index = spr_note_shootDone;
+        
+        // Play random vocal shout 
+        //if (random(10) &gt;= 9) {
+            sound_index = choose(comeon1, doit1, drop2, go2, ho1, hey1, oh1, yeah2)
+            audio_play_sound(sound_index, 30, false)
+        //}
     }
 }
 
