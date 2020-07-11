@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\song1</sound>
     <sound>sound\bonk</sound>
+    <sound>sound\song4</sound>
     <sounds name="shouts">
       <sound>sound\comeon1</sound>
       <sound>sound\doit1</sound>
@@ -47,6 +48,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_song1.gml</script>
+    <script>scripts\scr_song4.gml</script>
     <script>scripts\scr_Array2.gml</script>
   </scripts>
   <objects name="objects">
@@ -72,6 +74,7 @@
     <room>rooms\level1</room>
     <room>rooms\level2</room>
     <room>rooms\level3</room>
+    <room>rooms\level4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
