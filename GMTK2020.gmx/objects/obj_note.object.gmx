@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>x = x - global.note_speed
+y = view_yview + global.padding
 </string>
           </argument>
         </arguments>
