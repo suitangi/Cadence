@@ -22,6 +22,7 @@
     <sprite>sprites\spr_note_left</sprite>
     <sprite>sprites\spr_note_right</sprite>
     <sprite>sprites\spr_note_shoot</sprite>
+    <sprite>sprites\sprite14</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -43,6 +44,7 @@
     <object>objects\obj_note_right</object>
     <object>objects\obj_note_shoot</object>
     <object>objects\obj_musicController</object>
+    <object>objects\obj_jump</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>
