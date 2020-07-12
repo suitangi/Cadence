@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize Variables
+            <string>show_debug_overlay(true)
+
+///Initialize Variables
 grav = 0.5
 air_resist = 1.5
 max_vsp = 10
