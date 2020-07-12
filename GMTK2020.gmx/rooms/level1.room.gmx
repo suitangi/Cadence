@@ -3,8 +3,8 @@
   <caption></caption>
   <width>4064</width>
   <height>2320</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -384,6 +384,13 @@
     <instance objName="obj_wall" x="3360" y="1376" name="inst_58C822A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="3488" y="1536" name="inst_3E2EBA08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="3648" y="1632" name="inst_50CE01FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_death_thing" x="2192" y="1296" name="inst_7779A0E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_death_thing" x="2224" y="1296" name="inst_08C56603" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_death_thing" x="2256" y="1296" name="inst_8FFAA52A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_death_thing" x="2288" y="1296" name="inst_4FA304B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_death_thing" x="2320" y="1296" name="inst_990DDDE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_death_thing" x="2352" y="1296" name="inst_4CDF703D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_death_thing" x="2384" y="1296" name="inst_8FDB408C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background0" x="96" y="1888" w="32" h="32" xo="0" yo="16" id="10000061" name="inst_B49CE81A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

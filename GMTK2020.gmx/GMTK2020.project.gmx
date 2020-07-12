@@ -92,6 +92,7 @@
     <object>objects\obj_health_indicator</object>
     <object>objects\obj_health_indicator_sprite</object>
     <object>objects\obj_menuCon</object>
+    <object>objects\obj_death_thing</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>
