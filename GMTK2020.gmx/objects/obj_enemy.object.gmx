@@ -191,7 +191,7 @@ if (!dying){
     instance_destroy(other);
     if (life &gt; 0) {
         iframe = true;
-        alarm[1] = 60;
+        alarm[1] = 30;
         sprite_index = spr_enemyIframe;
     } else {
         sprite_index = spr_enemyDie;
@@ -200,6 +200,9 @@ if (!dying){
         dying = true;
         alarm[3] = image_number/image_speed - 1;
     }
+}
+if (attacking){
+    alarm[2] = 1;
 }
 </string>
           </argument>

@@ -413,7 +413,7 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (iframe == false) {
+            <string>if (iframe == false &amp;&amp; !other.dying) {
     iframe = true
     alarm[4] = iframe_cooldown
     player_health -= 1
