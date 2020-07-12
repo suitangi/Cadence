@@ -8,7 +8,6 @@
     <sound>sound\song1</sound>
     <sound>sound\song2</sound>
     <sound>sound\song4</sound>
-    <sound>sound\bonk</sound>
     <sounds name="shouts">
       <sound>sound\comeon1</sound>
       <sound>sound\go2</sound>
@@ -62,6 +61,9 @@
     <script>scripts\scr_song2.gml</script>
     <script>scripts\scr_song4.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
