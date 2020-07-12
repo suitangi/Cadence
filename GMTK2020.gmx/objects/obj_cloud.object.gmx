@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = view_xview[0]
-y = view_yview[0];
+            <string>x = view_xview[0] - view_xview[0]/room_width * 400;
+y = view_yview[0] - view_yview[0]/room_height * 200 + 200;
 
 </string>
           </argument>
