@@ -107,7 +107,8 @@ image_yscale = random_range(0.8, 1.2)
           <argument>
             <kind>1</kind>
             <string>///destroy self
-instance_destroy()
+instance_create(x, y, obj_bulletImpact);
+instance_destroy();
 </string>
           </argument>
         </arguments>
