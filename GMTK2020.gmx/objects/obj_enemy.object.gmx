@@ -30,7 +30,32 @@ attacking = false;
 attack_duration = 120;
 life = 2;
 iframe = false;
+dying = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///destroy
 
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -123,22 +148,21 @@ sprite_index = spr_enemyIdle;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (distance_to_point(obj_player.x, obj_player.y) &lt; 60 &amp;&amp; !attacking &amp;&amp; !iframe) {
+            <string>if (distance_to_point(obj_player.x, obj_player.y) &lt; 60 &amp;&amp; !attacking &amp;&amp; !iframe &amp;&amp; !dying) {
     attacking = true;
     sprite_index = spr_enemyAttack;
     alarm[0] = image_number/image_speed;
     alarm[2] = attack_duration;
     image_index = 0;
 }
-if (life &lt; 1) {
-    instance_destroy();
-}
 
 // always face player
-if (obj_player.x - x &gt;= 0) {
-    image_xscale = -1
-} else {
-    image_xscale = 1   
+if (!dying){
+    if (obj_player.x - x &gt;= 0) {
+        image_xscale = -1
+    } else {
+        image_xscale = 1   
+    }
 }
 </string>
           </argument>
@@ -162,12 +186,20 @@ if (obj_player.x - x &gt;= 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!iframe) {
+            <string>if (!iframe &amp;&amp; !dying) {
     life -= 1;
     instance_destroy(other);
-    iframe = true;
-    alarm[1] = 60;
-    sprite_index = spr_enemyIframe;
+    if (life &gt; 0) {
+        iframe = true;
+        alarm[1] = 60;
+        sprite_index = spr_enemyIframe;
+    } else {
+        sprite_index = spr_enemyDie;
+        image_index = 0;
+        image_speed = 2;
+        dying = true;
+        alarm[3] = image_number/image_speed - 1;
+    }
 }
 </string>
           </argument>
