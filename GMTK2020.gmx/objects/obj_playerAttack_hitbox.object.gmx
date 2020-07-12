@@ -132,6 +132,7 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>///destroy self
+instance_create(x, y, obj_bulletImpact);
 instance_destroy()
 </string>
           </argument>

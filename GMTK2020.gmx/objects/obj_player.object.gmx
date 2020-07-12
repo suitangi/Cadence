@@ -45,6 +45,7 @@ iframe = false;
 iframe_flashing = false;
 iframe_cooldown = 60;
 iframe_flash_speed = 4;
+show_debug_overlay(true);
 </string>
           </argument>
         </arguments>
