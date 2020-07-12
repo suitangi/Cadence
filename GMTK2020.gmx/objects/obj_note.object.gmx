@@ -27,8 +27,12 @@
             <kind>1</kind>
             <string>// in seconds (game runs at 60fps)
 time_to_end = obj_musicController.four_beats
+four_beats_in_seconds = time_to_end / 60
+four_beats_in_microseconds = four_beats_in_seconds * 1000000
 total_frames = time_to_end
 frames_to_end = time_to_end
+time_now = get_timer()
+time_start = get_timer()
 distance_x = x - obj_note_end.x
 
 collision_buffer = 5
@@ -79,7 +83,7 @@ stop = false;
           <argument>
             <kind>1</kind>
             <string>if (!stop) {
-    x = obj_note_end.x + (distance_x * (frames_to_end / total_frames))
+    x = obj_note_end.x + (distance_x * (1 - ((get_timer() - time_start) / four_beats_in_microseconds)))
     y = view_yview + global.padding
     frames_to_end -= 1
 } else {
