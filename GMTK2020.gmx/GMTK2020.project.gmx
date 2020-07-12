@@ -46,7 +46,8 @@
     <sprite>sprites\spr_enemyDie</sprite>
     <sprite>sprites\spr_enemyIframe</sprite>
     <sprite>sprites\spr_enemyAttack</sprite>
-    <sprite>sprites\sprite23</sprite>
+    <sprite>sprites\spr_fire_orig</sprite>
+    <sprite>sprites\spr_fire</sprite>
     <sprite>sprites\spr_buleltImpact</sprite>
     <sprite>sprites\space_to_jam</sprite>
     <sprite>sprites\spr_airjump</sprite>
