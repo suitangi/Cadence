@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\song1</sound>
+    <sound>sound\song2</sound>
     <sound>sound\song4</sound>
     <sound>sound\bonk</sound>
     <sounds name="shouts">
@@ -53,6 +54,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_song1.gml</script>
+    <script>scripts\scr_song2.gml</script>
     <script>scripts\scr_song4.gml</script>
     <script>scripts\scr_Array2.gml</script>
   </scripts>
