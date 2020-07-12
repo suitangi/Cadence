@@ -28,6 +28,8 @@
             <string>microsbp = 99999999999999999
 song_start_time_micro = 999999999999999
 
+song_started = false
+
 audio_group_stop_all(Music);
 
 if (room_get_name(room) == "level1"){
@@ -70,6 +72,7 @@ audio_group_load(Music);
           <argument>
             <kind>1</kind>
             <string>audio_play_sound(songIndex, 10, false);
+song_started = true
 </string>
           </argument>
         </arguments>
@@ -95,11 +98,11 @@ audio_group_load(Music);
             <string>x = obj_note_end.x + 1024
 y = obj_note_end.y
 
+if (!ds_queue_empty(notes_queue)) {
+    next_note_beat = ds_queue_head(notes_queue)
+}
 
-next_note_beat = ds_queue_head(notes_queue)
-
-
-if (get_timer() &gt; song_start_time_micro + microspb * next_note_beat) {
+if (get_timer() &gt; song_start_time_micro + microspb * next_note_beat &amp;&amp; !ds_queue_empty(notes_queue)) {
     ds_queue_dequeue(notes_queue)
     action = ds_queue_dequeue(notes_queue)
     
@@ -112,6 +115,11 @@ if (get_timer() &gt; song_start_time_micro + microspb * next_note_beat) {
     } else if(action == 3) {
         instance_create(obj_musicController.x, obj_musicController.y, obj_note_left);
     }
+}
+
+if (!audio_is_playing(songIndex) &amp;&amp; song_started) {
+    instance_create(x, y, obj_musicController)
+    instance_destroy()
 }
 
 
