@@ -132,6 +132,7 @@ if (timer != "stop"){
                 instance_create(obj_musicController.x, obj_musicController.y, obj_note_left);
             }
             timer = (beats[ind + 1, 0] - beats[ind, 0]) * spb * 60;
+            show_debug_message(timer)
             ind += 1;
         }
     }

@@ -1,7 +1,7 @@
 obj_musicController.bpm = 131.7;
 obj_musicController.spb = 1/(obj_musicController.bpm/60)
 // start music after 4 beats (first note hits right on music start)
-obj_musicController.four_beats = spb * 4 * 60
+obj_musicController.four_beats = obj_musicController.spb * 4 * 60
 obj_musicController.alarm[0] = obj_musicController.four_beats;
 
 obj_musicController.timer = 1;
