@@ -193,12 +193,16 @@ if (!dying){
         iframe = true;
         alarm[1] = 20;
         sprite_index = spr_enemyIframe;
+        audio_play_sound(enemy_hit, 10, false);
     } else {
         sprite_index = spr_enemyDie;
         image_index = 0;
         image_speed = 2;
         dying = true;
         alarm[3] = image_number/image_speed - 1;
+        
+        // die sfx
+        audio_play_sound(enemy_die, 10, false);
     }
 }
 if (attacking){
