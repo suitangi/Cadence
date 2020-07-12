@@ -24,6 +24,7 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_health</sprite>
     <sprite>sprites\spr_jukebox</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_playerIdle</sprite>
@@ -86,7 +87,11 @@
     <object>objects\obj_bulletImpact</object>
     <object>objects\obj_jukebox</object>
     <object>objects\press_spacebar</object>
+
     <object>objects\obj_controls</object>
+    <object>objects\obj_health_indicator</object>
+    <object>objects\obj_health_indicator_sprite</object>
+
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>
