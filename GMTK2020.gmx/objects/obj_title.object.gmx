@@ -27,6 +27,12 @@
             <kind>1</kind>
             <string>global.levels = 0
 randomize();
+
+
+song_position = audio_sound_get_track_position(global.intro_music);
+audio_stop_sound(global.intro_music)
+global.intro_music = audio_play_sound(song_intro, 10, false);
+audio_sound_set_track_position(global.intro_music, song_position);
 </string>
           </argument>
         </arguments>
