@@ -52,6 +52,7 @@
     <sprite>sprites\spr_buleltImpact</sprite>
     <sprite>sprites\space_to_jam</sprite>
     <sprite>sprites\spr_airjump</sprite>
+    <sprite>sprites\spr_controls</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -85,6 +86,7 @@
     <object>objects\obj_bulletImpact</object>
     <object>objects\obj_jukebox</object>
     <object>objects\press_spacebar</object>
+    <object>objects\obj_controls</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>
