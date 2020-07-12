@@ -40,13 +40,16 @@ image_speed = .25;
 global.view_border = 300
 shooting = false;
 dashing = false;
-player_health = 3;
+player_starting_health = 3
+player_health = player_starting_health;
 iframe = false;
 iframe_flashing = false;
 iframe_cooldown = 60;
 iframe_flash_speed = 4;
 show_debug_overlay(true);
 global.idealTime = 16666 + (2/3);
+
+instance_create(x, y, obj_health_indicator)
 </string>
           </argument>
         </arguments>
