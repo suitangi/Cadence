@@ -51,10 +51,14 @@
     <sprite>sprites\space_to_jam</sprite>
     <sprite>sprites\spr_airjump</sprite>
     <sprite>sprites\spr_controls</sprite>
+    <sprite>sprites\spr_cloud</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
+    <background>background\background2</background>
+    <background>background\background3</background>
+    <background>background\background4</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -93,6 +97,7 @@
     <object>objects\obj_health_indicator_sprite</object>
     <object>objects\obj_menuCon</object>
     <object>objects\obj_death_thing</object>
+    <object>objects\obj_cloud</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>
