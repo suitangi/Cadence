@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer = "stop";
+            <string>microsbp = 99999999999999999
+song_start_time_micro = 999999999999999
+
+timer = "stop";
 audio_group_stop_all(Music);
 
 if (room_get_name(room) == "level1"){
@@ -43,29 +46,9 @@ x = obj_note_end.x + 1024
 y = obj_note_end.y
 audio_group_load(Music);
 
+show_debug_message(microspb)
+
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
@@ -113,29 +96,26 @@ audio_group_load(Music);
             <string>x = obj_note_end.x + 1024
 y = obj_note_end.y
 
-if (timer != "stop"){
-    timer -= delta_time/global.idealTime
-    if (timer &lt;= 0) {
-        if (ind == -1 &amp;&amp; beats[0, 0] != 0) {
-            timer = beats[0, 0] * spb * 60;
-            ind = 0;
-        } else {
-            if (ind == -1)
-                ind = 0;
-            if (beats[ind, 1] == 0){
-                instance_create(obj_musicController.x, obj_musicController.y, obj_note_shoot);
-            } else if(beats[ind, 1] == 1) {
-                instance_create(obj_musicController.x, obj_musicController.y, obj_note_up);
-            } else if(beats[ind, 1] == 2) {
-                instance_create(obj_musicController.x, obj_musicController.y, obj_note_right);
-            } else if(beats[ind, 1] == 3) {
-                instance_create(obj_musicController.x, obj_musicController.y, obj_note_left);
-            }
-            timer = (beats[ind + 1, 0] - beats[ind, 0]) * spb * 60;
-            ind += 1;
-        }
+
+next_note_beat = ds_queue_head(notes_queue)
+
+
+if (get_timer() &gt; song_start_time_micro + microspb * next_note_beat) {
+    ds_queue_dequeue(notes_queue)
+    action = ds_queue_dequeue(notes_queue)
+    
+    if (action == 0){
+        instance_create(obj_musicController.x, obj_musicController.y, obj_note_shoot);
+    } else if(action == 1) {
+        instance_create(obj_musicController.x, obj_musicController.y, obj_note_up);
+    } else if(action == 2) {
+        instance_create(obj_musicController.x, obj_musicController.y, obj_note_right);
+    } else if(action == 3) {
+        instance_create(obj_musicController.x, obj_musicController.y, obj_note_left);
     }
 }
+
+
 </string>
           </argument>
         </arguments>
