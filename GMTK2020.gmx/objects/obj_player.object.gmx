@@ -293,8 +293,8 @@ key_right = keyboard_check(ord("D"))
 key_left = -keyboard_check(ord("A"))
 key_up = keyboard_check_pressed(ord("W"))
 key_down = keyboard_check(ord("S"))
-key_temp_rightdash = keyboard_check(ord("P"))
-key_temp_leftdash = -keyboard_check(ord("O"))
+//key_temp_rightdash = keyboard_check(ord("P"))
+//key_temp_leftdash = -keyboard_check(ord("O"))
 
 
 move = key_left + key_right
@@ -331,7 +331,7 @@ if (place_meeting(x, y + 1, obj_wall) &amp;&amp; (key_up == 1)) {
     instance_create(x, y + 32, obj_jump);
 }
 
-    
+/*    
 // temp rightdash
 if (key_temp_rightdash = 1) {
     hsp = key_temp_rightdash * dashspeed
@@ -341,6 +341,7 @@ if (key_temp_rightdash = 1) {
 if (key_temp_leftdash = -1) {
     hsp = key_temp_leftdash * dashspeed
 }
+*/
 
 // horizontal collision
 if (place_meeting(x + hsp, y, obj_wall)) {
@@ -429,7 +430,8 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
     show_debug_message("lost 1 health")
     
     if (player_health == 0) {
-        room_restart()
+        instance_create(0, 0, obj_gameOver);
+        instance_destroy();
     }
 }
 </string>
@@ -466,7 +468,8 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
     //show_debug_message("lost 1 health")
     
     if (player_health == 0) {
-        room_restart()
+        instance_create(0, 0, obj_gameOver);
+        instance_destroy();
     }
 }
 </string>
@@ -501,17 +504,25 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
     <event eventtype="7" enumb="0">
       <action>
         <libid>1</libid>
-        <id>223</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_current_room</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>        instance_create(0, 0, obj_gameOver);
+        instance_destroy();
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>

@@ -148,20 +148,23 @@ sprite_index = spr_enemyIdle;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (distance_to_point(obj_player.x, obj_player.y) &lt; 60 &amp;&amp; !attacking &amp;&amp; !iframe &amp;&amp; !dying) {
-    attacking = true;
-    sprite_index = spr_enemyAttack;
-    alarm[0] = image_number/image_speed;
-    alarm[2] = attack_duration;
-    image_index = 0;
-}
+            <string>if (instance_exists(obj_player)){
+    if (distance_to_point(obj_player.x, obj_player.y) &lt; 60 &amp;&amp; !attacking &amp;&amp; !iframe &amp;&amp; !dying) {
+        attacking = true;
+        sprite_index = spr_enemyAttack;
+        alarm[0] = image_number/image_speed;
+        alarm[2] = attack_duration;
+        image_index = 0;
+    }
 
-// always face player
-if (!dying){
-    if (obj_player.x - x &gt;= 0) {
-        image_xscale = -1
-    } else {
-        image_xscale = 1   
+
+    // always face player
+    if (!dying){
+        if (obj_player.x - x &gt;= 0) {
+            image_xscale = -1
+        } else {
+            image_xscale = 1   
+        }
     }
 }
 </string>

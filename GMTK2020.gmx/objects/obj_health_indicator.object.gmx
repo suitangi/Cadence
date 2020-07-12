@@ -59,12 +59,13 @@ for(i = obj_player.player_health; i &gt; 0; i--) {
             <string>x = view_xview[0] + global.padding
 y = view_yview[0] + 768 - global.padding
 
-
-if (obj_player.player_health != current_health) {
-    current_health = obj_player.player_health
-    instance_destroy(obj_health_indicator_sprite)
-    for(i = obj_player.player_health; i &gt; 0; i--) {
-        instance_create(x + 64 * (i - 1), y, obj_health_indicator_sprite)
+if (instance_exists(obj_player)){
+    if (obj_player.player_health != current_health) {
+        current_health = obj_player.player_health
+        instance_destroy(obj_health_indicator_sprite)
+        for(i = obj_player.player_health; i &gt; 0; i--) {
+            instance_create(x + 64 * (i - 1), y, obj_health_indicator_sprite)
+        }
     }
 }
 </string>

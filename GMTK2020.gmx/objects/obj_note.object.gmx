@@ -91,6 +91,7 @@ stop = false;
     y = obj_note_end.y
 }
     
+if (instance_exists(obj_player)){
 // collision with obj_note_end
 if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
     // TEMP bonk sound effect
@@ -132,7 +133,7 @@ if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
     }
 }
 
-
+}
 
 </string>
           </argument>

@@ -105,6 +105,7 @@
     <object>objects\obj_cloud2</object>
     <object>objects\obj_beginner</object>
     <object>objects\obj_challenge</object>
+    <object>objects\obj_gameOver</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>
