@@ -102,6 +102,8 @@ if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
         with (obj_player) {
             if (place_meeting(x, y + 1, obj_wall)) {
                 instance_create(x, y + 32, obj_jump);
+            } else {
+                instance_create(x, y + 32, obj_airjump);
             }
         }
         obj_player.vsp = -1 * obj_player.jumpspeed
