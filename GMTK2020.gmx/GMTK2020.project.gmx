@@ -46,19 +46,23 @@
     <sprite>sprites\spr_enemyDie</sprite>
     <sprite>sprites\spr_enemyIframe</sprite>
     <sprite>sprites\spr_enemyAttack</sprite>
-    <sprite>sprites\sprite23</sprite>
+    <sprite>sprites\spr_fire_orig</sprite>
+    <sprite>sprites\spr_fire</sprite>
     <sprite>sprites\spr_buleltImpact</sprite>
     <sprite>sprites\space_to_jam</sprite>
     <sprite>sprites\spr_airjump</sprite>
     <sprite>sprites\spr_controls</sprite>
     <sprite>sprites\spr_cloud</sprite>
+    <sprite>sprites\spr_cloud2</sprite>
+    <sprite>sprites\spr_beginner</sprite>
+    <sprite>sprites\spr_challenger</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\background1</background>
     <background>background\background2</background>
     <background>background\background3</background>
-    <background>background\background4</background>
+    <background>background\background5</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -96,7 +100,11 @@
     <object>objects\obj_health_indicator</object>
     <object>objects\obj_health_indicator_sprite</object>
     <object>objects\obj_menuCon</object>
+    <object>objects\obj_death_thing</object>
     <object>objects\obj_cloud</object>
+    <object>objects\obj_cloud2</object>
+    <object>objects\obj_beginner</object>
+    <object>objects\obj_challenge</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>

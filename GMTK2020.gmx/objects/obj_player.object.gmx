@@ -400,6 +400,43 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_death_thing">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (iframe == false) {
+    iframe = true
+    alarm[4] = iframe_cooldown
+    player_health -= 1
+    
+    image_blend = c_red
+    alarm[5] = iframe_flash_speed
+    
+    //test
+    show_debug_message("lost 1 health")
+    
+    if (player_health == 0) {
+        room_restart()
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_enemy">
       <action>
         <libid>1</libid>
@@ -426,7 +463,7 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
     alarm[5] = iframe_flash_speed
     
     //test
-    show_debug_message("lost 1 health")
+    //show_debug_message("lost 1 health")
     
     if (player_health == 0) {
         room_restart()
