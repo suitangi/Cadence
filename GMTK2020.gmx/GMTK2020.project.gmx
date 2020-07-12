@@ -42,6 +42,7 @@
     <sprite>sprites\spr_playerDash</sprite>
     <sprite>sprites\spr_dashparticle</sprite>
     <sprite>sprites\spr_enemyIdle</sprite>
+    <sprite>sprites\spr_enemyDie</sprite>
     <sprite>sprites\spr_enemyIframe</sprite>
     <sprite>sprites\spr_enemyAttack</sprite>
     <sprite>sprites\sprite23</sprite>
