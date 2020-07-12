@@ -8,11 +8,8 @@
     <sound>sound\song1</sound>
     <sound>sound\song2</sound>
     <sound>sound\song4</sound>
-    <sound>sound\bonk</sound>
     <sounds name="shouts">
       <sound>sound\comeon1</sound>
-      <sound>sound\doit1</sound>
-      <sound>sound\drop2</sound>
       <sound>sound\go2</sound>
       <sound>sound\ho1</sound>
       <sound>sound\hey1</sound>
@@ -42,7 +39,6 @@
     <sprite>sprites\spr_noteGone</sprite>
     <sprite>sprites\spr_note_shoot</sprite>
     <sprite>sprites\spr_jumpParticle</sprite>
-    <sprite>sprites\sprite15</sprite>
     <sprite>sprites\spr_playerAttack_hitbox</sprite>
     <sprite>sprites\spr_playerDash</sprite>
     <sprite>sprites\spr_dashparticle</sprite>
@@ -67,6 +63,9 @@
     <script>scripts\scr_song3.gml</script>
     <script>scripts\scr_song4.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
@@ -92,6 +91,7 @@
     <object>objects\obj_controls</object>
     <object>objects\obj_health_indicator</object>
     <object>objects\obj_health_indicator_sprite</object>
+    <object>objects\obj_menuCon</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>

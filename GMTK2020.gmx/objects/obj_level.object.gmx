@@ -77,8 +77,10 @@ if room_exists(roomindex) {
           <argument>
             <kind>1</kind>
             <string>draw_self()
-draw_set_colour(c_black)
-draw_text(x, y, this_level)
+draw_set_colour(make_color_rgb(243, 214, 152));
+draw_set_font(font0);
+draw_set_halign(fa_center);
+draw_text(x, y - 8, this_level)
 </string>
           </argument>
         </arguments>

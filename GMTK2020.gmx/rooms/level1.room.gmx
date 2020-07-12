@@ -383,7 +383,7 @@
     <instance objName="obj_wall" x="2432" y="1152" name="inst_82B61F98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="3360" y="1376" name="inst_58C822A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="3488" y="1536" name="inst_3E2EBA08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door" x="3904" y="1568" name="inst_50CE01FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="3648" y="1632" name="inst_50CE01FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background0" x="96" y="1888" w="32" h="32" xo="0" yo="16" id="10000061" name="inst_B49CE81A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
