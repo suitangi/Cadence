@@ -94,7 +94,7 @@ stop = false;
 // collision with obj_note_end
 if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
     // TEMP bonk sound effect
-    audio_play_sound(bonk, 20, false);
+    //audio_play_sound(bonk, 20, false);
     
     alarm[0] = 60;
     stop = true;
