@@ -37,7 +37,8 @@ jumpspeed = 10
 dashspeed = 30
 movespeed = 4
 image_speed = .25;
-global.view_border = 300
+global.view_border_vertical = 300
+global.view_border_horizontal = 400
 shooting = false;
 dashing = false;
 player_starting_health = 3
@@ -365,20 +366,20 @@ y += vsp
 
 // update view
 // left collision
-if(x - view_xview[0] &lt; global.view_border) {
-    view_xview[0] = x - global.view_border
+if(x - view_xview[0] &lt; global.view_border_horizontal) {
+    view_xview[0] = x - global.view_border_horizontal
 }
 //right collision
-if(x + global.view_border &gt; view_xview[0] + view_wview[0]) {
-    view_xview[0] = x - (view_wview[0] - global.view_border)
+if(x + global.view_border_horizontal &gt; view_xview[0] + view_wview[0]) {
+    view_xview[0] = x - (view_wview[0] - global.view_border_horizontal)
 }
 //top collision
-if(y - view_yview[0] &lt; global.view_border) {
-    view_yview[0] = y - global.view_border
+if(y - view_yview[0] &lt; global.view_border_vertical) {
+    view_yview[0] = y - global.view_border_vertical
 }
 //bottom collision
-if(y + global.view_border &gt; view_yview[0] + view_hview[0]) {
-    view_yview[0] = y - (view_hview[0] - global.view_border)
+if(y + global.view_border_vertical &gt; view_yview[0] + view_hview[0]) {
+    view_yview[0] = y - (view_hview[0] - global.view_border_vertical)
 }
 
 //bounds check
