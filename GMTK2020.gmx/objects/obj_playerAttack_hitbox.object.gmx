@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>projectile_speed = -16
 image_speed = 0.25
+audio_play_sound(magic_shoot, 10, false);
 
 //spicy stuff
 alarm[0] = 4
@@ -107,6 +108,8 @@ image_yscale = random_range(0.8, 1.2)
           <argument>
             <kind>1</kind>
             <string>///destroy self
+audio_play_sound(magic_hit, 10, false);
+
 if (!other.dying){
     instance_create(x, y, obj_bulletImpact);
     instance_destroy();
@@ -134,6 +137,8 @@ if (!other.dying){
           <argument>
             <kind>1</kind>
             <string>///destroy self
+audio_play_sound(magic_hit, 10, false);
+
 instance_create(x, y, obj_bulletImpact);
 instance_destroy()
 </string>

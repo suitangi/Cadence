@@ -100,22 +100,26 @@ if (abs(x - obj_note_end.x) &lt; collision_buffer &amp;&amp; !stop) {
     alarm[0] = 60;
     stop = true;
     if (object_get_name(object_index) == "obj_note_up") {
+        
         with (obj_player) {
             if (place_meeting(x, y + 1, obj_wall)) {
                 instance_create(x, y + 32, obj_jump);
             } else {
                 instance_create(x, y + 32, obj_airjump);
+                audio_play_sound(player_force_jump, 10, false);
             }
         }
         obj_player.vsp = -1 * obj_player.jumpspeed
         sprite_index = spr_noteGone;
     } else if (object_get_name(object_index) == "obj_note_left") {
+        audio_play_sound(player_dash, 10, false);
         obj_player.hsp = -obj_player.dashspeed
         obj_player.alarm[3] = 1;
         obj_player.alarm[11] = 6;
         obj_player.image_xscale = 1;
         sprite_index = spr_noteGone;
     } else if (object_get_name(object_index) == "obj_note_right") {
+        audio_play_sound(player_dash, 10, false);
         obj_player.hsp = obj_player.dashspeed
         obj_player.alarm[3] = 1;
         obj_player.image_xscale = -1;

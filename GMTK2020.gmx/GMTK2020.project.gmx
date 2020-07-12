@@ -19,6 +19,14 @@
     <sound>sound\song_intro</sound>
     <sound>sound\song_intro_eq</sound>
     <sound>sound\song3</sound>
+    <sound>sound\enemy_die</sound>
+    <sound>sound\enemy_hit</sound>
+    <sound>sound\magic_hit</sound>
+    <sound>sound\magic_shoot</sound>
+    <sound>sound\player_hurt</sound>
+    <sound>sound\player_jump</sound>
+    <sound>sound\player_force_jump</sound>
+    <sound>sound\player_dash</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>

@@ -328,6 +328,7 @@ if (vsp &lt; max_vsp) {
 // jump
 if (place_meeting(x, y + 1, obj_wall) &amp;&amp; (key_up == 1)) {
     vsp = key_up * -jumpspeed
+    audio_play_sound(player_jump, 10, false);
     instance_create(x, y + 32, obj_jump);
 }
 
@@ -460,6 +461,7 @@ if(view_yview[0] + view_hview[0] &gt; room_height) {
     iframe = true
     alarm[4] = iframe_cooldown
     player_health -= 1
+    audio_play_sound(player_hurt, 10, false);
     
     image_blend = c_red
     alarm[5] = iframe_flash_speed
