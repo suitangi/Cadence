@@ -83,7 +83,7 @@ alarm[1] = 20
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.intro_music = audio_play_sound_at(song_intro_eq, x, y, 0, 750, 1500, 1, false, 10);
+            <string>global.intro_music = audio_play_sound_at(song_intro_eq, x, y, 0, 750, 1500, 1, true, 10);
 
 //audio_play_sound_at(index, x, y, z, falloff_ref, falloff_max, falloff_factor, loop, priority);
 </string>
