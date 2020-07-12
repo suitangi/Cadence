@@ -28,7 +28,6 @@
             <string>microsbp = 99999999999999999
 song_start_time_micro = 999999999999999
 
-timer = "stop";
 audio_group_stop_all(Music);
 
 if (room_get_name(room) == "level1"){
@@ -40,7 +39,7 @@ if (room_get_name(room) == "level1"){
 } else if (room_get_name(room) == "level4"){
     scr_song4();
 }
-ind = -1;
+
 
 x = obj_note_end.x + 1024
 y = obj_note_end.y

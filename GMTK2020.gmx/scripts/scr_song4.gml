@@ -1,12 +1,15 @@
 obj_musicController.bpm = 160;
 spb = 1/(obj_musicController.bpm/60)
+obj_musicController.microspb = obj_musicController.spb * 1000000
 // start music after 4 beats (first note hits right on music start)
 obj_musicController.four_beats = spb * 4 * 60
+obj_musicController.song_start_time_micro = get_timer()
 obj_musicController.alarm[0] = obj_musicController.four_beats;
 
-obj_musicController.alarm[1] = 1;
 obj_musicController.songIndex = song4;
-obj_musicController.beats = scr_Array2(366, 2,
+
+obj_musicController.notes_queue = ds_queue_create();
+ds_queue_enqueue(obj_musicController.notes_queue,
 1,0,
 3,1,
 5,2,
