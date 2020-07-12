@@ -287,7 +287,7 @@ alarm[2] = 7
             <string>// inputs
 key_right = keyboard_check(ord("D"))
 key_left = -keyboard_check(ord("A"))
-key_up = keyboard_check(ord("W"))
+key_up = keyboard_check_pressed(ord("W"))
 key_down = keyboard_check(ord("S"))
 key_temp_rightdash = keyboard_check(ord("P"))
 key_temp_leftdash = -keyboard_check(ord("O"))
