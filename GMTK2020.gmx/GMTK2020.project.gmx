@@ -11,8 +11,6 @@
     <sound>sound\bonk</sound>
     <sounds name="shouts">
       <sound>sound\comeon1</sound>
-      <sound>sound\doit1</sound>
-      <sound>sound\drop2</sound>
       <sound>sound\go2</sound>
       <sound>sound\ho1</sound>
       <sound>sound\hey1</sound>
@@ -41,7 +39,6 @@
     <sprite>sprites\spr_noteGone</sprite>
     <sprite>sprites\spr_note_shoot</sprite>
     <sprite>sprites\spr_jumpParticle</sprite>
-    <sprite>sprites\sprite15</sprite>
     <sprite>sprites\spr_playerAttack_hitbox</sprite>
     <sprite>sprites\spr_playerDash</sprite>
     <sprite>sprites\spr_dashparticle</sprite>
@@ -87,11 +84,10 @@
     <object>objects\obj_bulletImpact</object>
     <object>objects\obj_jukebox</object>
     <object>objects\press_spacebar</object>
-
     <object>objects\obj_controls</object>
     <object>objects\obj_health_indicator</object>
     <object>objects\obj_health_indicator_sprite</object>
-
+    <object>objects\obj_menuCon</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\intro</room>
