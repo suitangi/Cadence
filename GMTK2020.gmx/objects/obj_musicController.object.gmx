@@ -45,7 +45,7 @@ x = obj_note_end.x + 1024
 y = obj_note_end.y
 audio_group_load(Music);
 
-show_debug_message(microspb)
+//show_debug_message(microspb)
 
 </string>
           </argument>

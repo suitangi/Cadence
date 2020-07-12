@@ -19,9 +19,12 @@
       <sound>sound\oh1</sound>
       <sound>sound\yeah2</sound>
     </sounds>
+    <sound>sound\song_intro</sound>
+    <sound>sound\song_intro_eq</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_jukebox</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_playerIdle</sprite>
     <sprite>sprites\spr_playerAttack</sprite>
@@ -47,6 +50,7 @@
     <sprite>sprites\spr_enemyAttack</sprite>
     <sprite>sprites\sprite23</sprite>
     <sprite>sprites\spr_buleltImpact</sprite>
+    <sprite>sprites\space_to_jam</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -77,8 +81,11 @@
     <object>objects\obj_dash</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_bulletImpact</object>
+    <object>objects\obj_jukebox</object>
+    <object>objects\press_spacebar</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\intro</room>
     <room>rooms\title</room>
     <room>rooms\level1</room>
     <room>rooms\level2</room>
