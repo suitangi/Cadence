@@ -54,6 +54,7 @@
             <kind>1</kind>
             <string>if (visible == true) {
     room_goto_next()
+    audio_stop_sound(sound_title_ambient);
 }
 </string>
           </argument>

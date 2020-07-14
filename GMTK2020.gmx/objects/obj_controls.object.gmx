@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0.25;
+
+var snd = audio_play_sound(sound_title_ambient, 10, true);
+audio_sound_gain(snd, 0, 0);
+audio_sound_gain(snd, .7, 500);
 </string>
           </argument>
         </arguments>

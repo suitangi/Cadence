@@ -31,6 +31,7 @@ song_start_time_micro = 999999999999999
 song_started = false
 
 audio_group_stop_all(Music);
+audio_group_set_gain(Music, 1, 0);
 
 if (room_get_name(room) == "level1"){
     scr_song2();
