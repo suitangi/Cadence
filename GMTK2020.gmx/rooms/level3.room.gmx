@@ -130,10 +130,10 @@
     <instance objName="obj_wall" x="3568" y="1376" name="inst_C62D5E6F" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="4976" y="1360" name="inst_9D90AB57" locked="0" code="" scaleX="6" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="5520" y="1104" name="inst_1D3C1059" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy" x="1504" y="960" name="inst_FEDB9B4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy" x="2336" y="720" name="inst_52FA8F61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy" x="3152" y="1104" name="inst_91F22E9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy" x="4272" y="1344" name="inst_CCF4E18D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy" x="1500" y="974" name="inst_FEDB9B4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy" x="2338" y="735" name="inst_52FA8F61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy" x="3157" y="1119" name="inst_91F22E9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy" x="4274" y="1343" name="inst_CCF4E18D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="5360" y="1168" name="inst_9A9B61CC" locked="0" code="" scaleX="6" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="4896" y="1344" name="inst_8FD94754" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="5184" y="1344" name="inst_9759E14E" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>

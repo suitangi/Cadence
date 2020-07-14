@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//show_debug_overlay(true)
+            <string>show_debug_overlay(false);
 
 ///Initialize Variables
 grav = 0.5
@@ -47,7 +47,6 @@ iframe = false;
 iframe_flashing = false;
 iframe_cooldown = 60;
 iframe_flash_speed = 4;
-show_debug_overlay(true);
 global.idealTime = 16666 + (2/3);
 
 instance_create(x, y, obj_health_indicator)
